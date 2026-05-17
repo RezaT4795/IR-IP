@@ -28,12 +28,10 @@ from pathlib import Path
 from typing import Iterator, Tuple
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-
 DNS_TIMEOUT_SECONDS = 2
 DNS_QUERY_DOMAIN = "web.bale.ai"
-PARALLEL = 65
+PARALLEL = 192
 PING_TIMEOUT_SECONDS = 2
-
 
 def is_valid_ipv4(value: str) -> bool:
 	try:
@@ -164,7 +162,7 @@ def parse_args() -> argparse.Namespace:
 		"--parallel",
 		type=int,
 		default=PARALLEL,
-		help=f"Number of IPs to check in parallel (default: {PARALLEL})",
+		help=f"Number of IPs to check in parallel (current: {PARALLEL})",
 	)
 
 	args = parser.parse_args()
