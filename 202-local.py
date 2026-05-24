@@ -29,7 +29,7 @@ from pathlib import Path
 from typing import Any, Callable
 from urllib.parse import urlparse
 
-MAX_PARALLEL = 25
+MAX_PARALLEL = 88
 TIMEOUT = 2
 
 PORTS: tuple[tuple[str, int], ...] = (

@@ -31,8 +31,8 @@ from collections import OrderedDict
 from typing import Dict, List, Optional, Tuple
 from urllib.parse import urlparse
 
-DNS_SERVERS = ["1.1.1.1", "4.2.2.4"]
-MAX_PARALLEL = 25
+DNS_SERVERS = ["2.189.44.44", "217.218.127.127"]
+MAX_PARALLEL = 88
 TIMEOUT = 2
 
 def extract_domain(url: str) -> Optional[str]:
