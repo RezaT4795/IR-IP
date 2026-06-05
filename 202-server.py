@@ -31,7 +31,7 @@ from collections import OrderedDict
 from typing import Dict, List, Optional, Tuple
 from urllib.parse import urlparse
 
-DNS_SERVERS = ["2.189.44.44", "217.218.127.127"]
+DNS_SERVERS = ["149.112.112.112", "178.22.122.100"]
 MAX_PARALLEL = 88
 TIMEOUT = 2
 
