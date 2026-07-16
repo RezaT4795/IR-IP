@@ -164,8 +164,6 @@ while IFS= read -r line || [ -n "$line" ]; do
 	
 	case "$action" in
 		add)
-			echo "Adding route for $route"
-			
 			if ip route replace "$route" via "$gateway" dev "$iface"; then
 				if ip -4 route show table main exact "$route" | grep -q .; then
 					echo "Added: $route"
@@ -178,8 +176,6 @@ while IFS= read -r line || [ -n "$line" ]; do
 		;;
 		
 		del|delete)
-			echo "Deleting route for $route"
-			
 			if ip -4 route show table main exact "$route" | grep -q .; then
 				if ip route del "$route"; then
 					echo "Deleted: $route"
@@ -193,4 +189,4 @@ while IFS= read -r line || [ -n "$line" ]; do
 	esac
 done < "$ip_file"
 
-echo "Done."
+echo -e "\nDone."
